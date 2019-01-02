@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>es.tdev.intellij</id>
+    <name>TaggedTypes</name>
+    <version>1.0</version>
+    <vendor email="javier.arrieta@gmail.com">Javier Arrieta</vendor>
+
+    <description><![CDATA[
+  <ul>
+  <li>Provides support for Scala macros used in the Tagged Types library</li>
+  </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        First implementation of the IntelliJ plugin
+    ]]></change-notes>
+
+    <idea-version since-build="145.0"/>
+
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="org.intellij.scala">
+        <syntheticMemberInjector implementation="es.tdev.intellij.taggedtypes.TaggedTypeInjector"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
